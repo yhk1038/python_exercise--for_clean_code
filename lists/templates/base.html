@@ -3,11 +3,12 @@
 		<title>To-Do lists</title>
 	</head>
 	<body>
-        {% extends 'base.html' %}
-		<h1>{% block header_text %}작업 목록 시작{% endblock %}</h1>
-		<form method="POST" action="{% block form_action %}/lists/new{% endblock %}">
+		<h1>{% block header_text %}{% endblock %}</h1>
+		<form method="POST" action="{% block form_action %}{% endblock %}">
             <input name="item_text" id="id_new_item" placeholder="작업 아이템 입력"/>
             {% csrf_token %}
 		</form>
+        {% block table %}
+        {% endblock %}
 	</body>
 </html>
