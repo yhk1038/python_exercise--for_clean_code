@@ -6,8 +6,9 @@ python:
   - "pypy"
 # command to install dependencies
 install:
-  - pip install .
+  - pip install --upgrade pip
   - pip install -r requirements.txt
+  
 # command to run tests
 script:
   - python manage.py test functional_tests
