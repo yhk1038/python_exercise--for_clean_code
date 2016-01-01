@@ -12,5 +12,7 @@ install:
   
 # command to run tests
 script:
-  - python manage.py test functional_tests
+  - py.test superlist
   - python manage.py test lists
+after_success:
+  - coveralls
