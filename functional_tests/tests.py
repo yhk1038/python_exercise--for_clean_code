@@ -112,8 +112,8 @@ class NewVisitorTest(StaticLiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
-            502,
-            delta=5
+            512,
+            delta=10
         )
         
         # 그녀는 새로운 리스트를 시작하고 입력상자가
@@ -122,6 +122,6 @@ class NewVisitorTest(StaticLiveServerTestCase):
         inputbox = self.browser.find_element_by_id('id_new_item')
         self.assertAlmostEqual(
             inputbox.location['x'] + inputbox.size['width'] / 2,
-            502,
-            delta=5
+            512,
+            delta=10
         )
